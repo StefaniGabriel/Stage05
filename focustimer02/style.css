@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-body: #FFFFFF;
+    --bg-rain: #02799D;
+    --bg-rain-hover: #07566d;
+    --bg-card:  #E1E1E6;
+    --bg-card-hover:  #a8a8ab;
+    --bg-button: #323238;
+    --bg-button-hover: #131314;
+    
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--bg-body);
+
+    
+}
+
+main {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+
+    max-width: clamp(41rem, 10vw + 41rem, 82rem);
+    max-height: clamp(12.8rem, 30vh + 12.8rem, 33.6rem);
+
+
+   
+    margin: 0 auto ;
+    padding-top: 30rem;
+
+    gap: 16rem;
+    
+}
+
+.control svg path:hover{
+    fill: var(--bg-button-hover);
+}
+
+
+
+.clock {
+    width:  clamp(15.6rem, 10vw + 15.6rem, 32.1rem);
+    height: clamp(10.5rem, 10vh + 10.5, 21.3rem);
+
+    transition: fill 2ms;
+}
+
+
+.timer {
+    font-weight: 500;
+    font-size:  12.6rem;
+    line-height: 14.8rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--bg-button);
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.control {
+    display: flex;
+    flex-direction: row;
+
+
+    gap: clamp(2rem, 10vw + 2rem, 4rem);
+
+    width: clamp(2.4rem, 30vw + 2.4rem, 4.8rem);
+    height:  clamp(2.4rem, 30vh + 2.4rem, 4.8rem);
+
+    
+    
+}
+
+main .sounds {
+    display: grid;
+    grid-template-areas: "A B"
+                         "C D";
+  
+    gap: 3.2rem;
+    
+    justify-items: center;
+    align-items: center;
+
+}
+
+main .sounds div:nth-child(1){
+    grid-area: A;
+}
+main .sounds div:nth-child(2){
+    grid-area: B;
+}
+main .sounds div:nth-child(3){
+    grid-area: C;
+}
+main .sounds div:nth-child(4){
+    grid-area: D;
+}
+
+
+.sounds .forest,
+.coffeeshop,
+.fireplace{
+   
+    background: var(--bg-card);
+    border-radius: 24px;
+}
+
+.sounds .forest,
+.coffeeshop,
+.fireplace,
+.rain {
+    width: 13.8rem;
+    height:  15rem;
+    padding: 4.8rem 4.6rem;
+
+    transition: background 3ms;
+    
+}
+
+.sounds .rain {
+
+    background: var(--bg-rain);
+    border-radius: 24px;
+}
+
+.sounds .rain:hover {
+    background: var(--bg-rain-hover);
+}
+.sounds .forest:hover,
+.coffeeshop:hover,
+.fireplace:hover {
+    background: var(--bg-card-hover);
+}
+
+
+
+@media (max-width: 900px){
+    main {
+        flex-direction: column;
+        gap: 8rem;
+        justify-content: center;
+        align-items: center;
+
+        margin: 4rem 8rem;
+    }
+
+    main .sounds{
+        margin-left: 8.0rem;
+        padding: 2.4rem 2.3rem;
+    }
+    
+
+   
+}
