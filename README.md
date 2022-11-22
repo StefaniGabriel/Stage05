@@ -1,1 +1,1 @@
-# curso-rocketseat-explorer
+# Desafio FocusTimer
