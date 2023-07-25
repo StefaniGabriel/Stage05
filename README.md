@@ -1,7 +1,7 @@
 
 # Stage 05 - Avançando no JavaScript
 
-## Tópicos abordados:
+### Tópicos abordados:
 
 - JavaScript DOM (Document Object Model)
 - Callbacks
